@@ -1,0 +1,396 @@
+/*reset*/
+*{ 
+    margin: 0px;
+    padding: 0px;
+}
+
+/* PAGINA 1 (HOME)*/
+
+/*estilos del header*/
+.img-logo-menu{
+    width: 250px;
+    height: 100px;
+}
+
+
+ /*estilos del main*/
+
+ .portada-imagen {
+    width: 1900px;
+    height: 650px;
+ }
+
+
+ /*estilos del footer*/
+
+footer {
+    text-align: center;
+    background-color: black;
+    margin-bottom: 0px;
+ }
+
+ .pie-img{
+    width: 100px;  
+    margin-top: 10px;
+    margin-left: 10px;
+ }
+
+ .pie-descripcion {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+
+/* PAGINA 2 (NOSOTROS)*/
+
+/*estilos del main*/
+
+.cuerpo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+    text-align: center;
+    
+
+    grid-template-areas:
+        "titulo titulo" 
+        "cuerpo-img p-1"
+        "cuerpo-img p-2"
+        
+        ;
+    justify-content:center;
+    justify-items: center;
+}
+.cuerpo-img{
+    grid-area: cuerpo-img;
+}
+
+.cuerpo-img:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}
+.p-1{
+    grid-area: p-1;
+}
+.p-2{
+    grid-area: p-2;
+
+}
+.titulo{
+    grid-area: titulo;
+
+}
+
+.titulo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 70px;
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    align-items: center;
+    color: white;
+    
+    
+}
+
+.cuerpo {
+    text-align: center;
+}
+
+.cuerpo-texto{
+    text-align:center;
+    padding:50px 50px 50px 50px;
+
+    
+}
+
+
+.cuerpo-img {
+    height: 400px;
+    width: 500px;
+    
+ }
+   
+
+footer{
+    margin-top: 100px;
+}
+
+
+/*vista para pantalla tablet*/
+
+
+@media screen and (max-width:760px){
+    .cuerpo-contenedor{
+        display: flex;
+        
+        justify-content: center;
+
+        
+        
+    }
+
+    .cuerpo-img{
+        
+        align-items: center;
+        width: 100vh;
+    }
+
+    .cuerpo-texto{
+        flex-direction: row;
+        text-align: center;
+        width: 100vh;
+       
+    }
+
+   
+}
+    
+    /*pantalla celular*/
+
+    @media screen and (max-width:580px){
+
+        .cuerpo-contenedor{
+            
+             }
+        .titulo{
+            display: none;
+        }
+        .cuerpo-img{
+            display: none;
+            
+        }
+
+        .cuerpo-texto{
+             width: 60vh;
+        }
+       
+
+
+    
+        
+        footer{
+            display: none;
+        }
+
+    
+    
+
+}
+    
+
+/* PAGINA 3 (TRABAJOS)*/
+
+/*estilos del main*/
+
+.trabajos-titulo{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+}
+
+.trabajos{
+    text-align:center;
+}
+
+.trabajos-padre{
+    display:flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+main div img{
+    width: 335px;
+    height:300px;
+    margin-right:10px;
+    margin-left: 10px;
+    margin-bottom: 90px;
+}
+.img-1:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}.img-2:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}
+.img-3:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}
+.img-4:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}.img-5:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}.img-6:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}.img-7:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}.img-8:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}.img-9:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}.img-10:hover{
+    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+}
+
+/*vista para pantalla tablet*/
+
+
+@media screen and (max-width:600px){
+    main{
+        
+        width: 100%;
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto;
+
+        grid-template-areas: 
+            "img-1 img-2"
+            "img-3 img-4"
+            "img-5 img-6"
+            "img-7 img-8"
+            "img-9 img-10";
+        justify-content: center;
+        justify-items: center;
+    }
+    .img-1{
+        grid-area: img-1;
+    }
+    .img-2{
+        grid-area: img-2;
+    }
+    .img-3{
+        grid-area: img-3;
+    }
+    .img-4{
+        grid-area: img-4;
+    }
+    .img-5{
+        grid-area: img-5;
+    }
+    .img-6{
+        grid-area: img-6;
+    }
+    .img-7{
+        grid-area: img-7;
+    }
+    .img-8{
+        grid-area: img-8;
+    }
+    .img-9{
+        grid-area: img-9;
+    }
+    .img-10{
+        grid-area: img-10;
+    }
+}
+    
+    /*pantalla celular*/
+
+    @media screen and (max-width:580px){
+
+
+        .trabajos-titulo{
+            display: none;
+        }
+
+        .trabajos-padre{
+            display: flex;
+            flex-direction: column;
+        }
+        footer{
+            display: none;
+        }
+
+    
+    
+
+}
+
+/* PAGINA 4 (UBICACION)*/
+
+/*estilos del main*/
+
+.contenedor{
+    text-align: center;
+}
+   
+.contenedor-titulo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+        
+.mapa {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.contenedor-texto {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contenedor-parrafo {
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.contenedor-parrafo-final {
+    margin-bottom: 50px;
+}
+
+/* PAGINA 5 (CONTACTO)*/
+
+/*estilos del main*/
+
+.contacto {
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    
+    
+}
+
+.contacto-titulo {
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+    
+    width: 250vh;
+    color: white;
+}
+
+.contacto-contenido{
+    margin-top: 10px;
+}
+
+.contacto-hijo {
+    margin-top: 30px;
+    display: flex;
+    flex-direction:row;
+    width: 500px;
+    
+}
+
+.contacto-img {
+    height:60px ;
+    width:60px ;
+    
+}
+
+.contacto-texto {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    margin-left: 20px;
+}
