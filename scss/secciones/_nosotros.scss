@@ -1,0 +1,118 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+/* PAGINA 2 (NOSOTROS)*/
+
+/*estilos del main*/
+
+.cuerpo{
+    font-family: $letra;
+    width: 100%;
+    text-align: center;
+    @include grid-2;
+    gap: 4vh;
+    grid-template-areas:
+        "titulo titulo" 
+        "cuerpo-img p-1"
+        "cuerpo-img p-2"  
+        ;
+
+        .titulo {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 70px;
+            margin-top: 20px;
+            font-family: $letra;
+            background-color: $color-negro;
+            align-items: center;
+            color:$color-blanco;
+            grid-area: titulo;
+        }
+
+                .cuerpo-img{
+                    grid-area: cuerpo-img;
+                    height: 70%;
+                    width: 90%;
+                    transition: 2s, 1s;
+                    }
+                .cuerpo-img:hover{
+                    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
+                }
+
+                    .cuerpo-texto{
+                        text-align:center;
+                        padding:50px 50px 50px 50px;  
+                    
+
+                        .p-1{
+                            grid-area: p-1;
+                        }
+
+                            .p-2{
+                                grid-area: p-2;
+                            
+                            }
+
+                        }        
+}
+
+
+footer{
+    margin-top: 100px;
+    
+}
+
+
+/*vista para pantalla tablet*/
+
+
+@media screen and (max-width:760px){
+    .cuerpo-contenedor{
+        display: flex;
+        justify-content: center;
+
+            .cuerpo-img{
+            
+                align-items: center;
+                width: 100vh;
+            }  
+
+                .cuerpo-texto{
+                    flex-direction: row;
+                    text-align: center;
+                    width: 100vh;
+                
+                }
+        
+    }
+ 
+}
+
+
+
+/*pantalla celular*/
+
+@media screen and (max-width:580px){
+
+       
+    .titulo{
+        @include borrar;
+    }
+    .cuerpo-img{
+        @include borrar;
+        
+    }
+
+    .cuerpo-texto{
+         width: 60vh;
+    }
+   
+    footer{
+        @include borrar;
+    }
+
+
+
+
+}

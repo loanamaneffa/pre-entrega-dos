@@ -1,0 +1,80 @@
+/*reset*/
+*{ 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+ /*estilos del header*/
+ .img-logo-menu{
+    @extend %logo;
+}
+
+/*estilos del main*/
+.home-portada{
+    @include grid;
+    grid-template-areas:
+    "portada"
+    "home-descripcion" ;
+   }
+
+ .portada-imagen {
+    width: 100%;
+    height: 0.2%;
+ }
+ .portada{
+    grid-area: portada;
+
+ }
+.home-descripcion{
+    grid-area: home-descripcion;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(228, 228, 228);
+}
+
+/*estilos del footer*/
+
+footer {
+    @extend %footer;
+            .pie-img{
+            @extend %pie-img;
+            }
+
+            .pie-descripcion {
+                @extend %pie-descripcion;
+            }
+}
+
+/*vista para pantalla tablet*/
+
+
+@media screen and (max-width:760px){
+    .home-descripcion{
+        background-color: rgb(245, 233, 218);
+    }
+    
+}
+
+/*pantalla celular*/
+
+@media screen and (max-width:580px){
+    footer{
+        @include borrar;
+        
+        }
+
+        
+
+
+       
+                  
+    }
+    
+    
+    
+
+

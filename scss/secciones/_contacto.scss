@@ -1,0 +1,83 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+/* PAGINA 5 (CONTACTO)*/
+
+/*estilos del main*/
+
+.contacto {
+   @include grid-3;
+    grid-template-areas: 
+        "contacto-titulo"
+        "contacto-contenido";  
+        
+        .contacto-titulo {
+            padding-top:10px;
+            padding-bottom:10px;
+            font-family:$letra;
+            background-color:$color-negro;
+            text-align: center;
+            width: 250vh;
+            color:$color-blanco;
+            grid-area: contacto-titulo;
+        }
+
+            .contacto-contenido{
+                margin-top: 10px;
+                grid-area: contacto-contenido;
+
+                    .contacto-hijo {
+                        margin-top: 30px;
+                        display: flex;
+                        flex-direction:row;
+                        width: 500px;
+
+                        .contacto-img {
+                            height:13% ;
+                            width:13% ;
+                            
+                        }
+
+                        .contacto-texto {
+                            font-family: $letra;
+                            padding: 10px;
+                            margin-left: 20px;
+                        }
+                        
+                    }
+            }
+}
+
+
+
+/*vista para pantalla tablet*/
+
+
+@media screen and (max-width:760px){
+    .contacto-titulo{
+        color: $color-negro;
+        background-color:rgb(238, 232, 223);
+    }
+   
+}
+
+/*pantalla celular*/
+
+@media screen and (max-width:580px){
+
+ 
+    .contacto-titulo{
+        @include borrar;
+    }
+  
+    footer{
+        @include borrar;
+        }
+       
+}
+
+
+
+
+

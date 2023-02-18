@@ -1,396 +1,392 @@
 /*reset*/
-*{ 
-    margin: 0px;
-    padding: 0px;
-}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
 
-/* PAGINA 1 (HOME)*/
-
-/*estilos del header*/
-.img-logo-menu{
-    width: 250px;
-    height: 100px;
-}
-
-
- /*estilos del main*/
-
- .portada-imagen {
-    width: 1900px;
-    height: 650px;
- }
-
-
- /*estilos del footer*/
+.img-logo-menu {
+  width: 230px;
+  height: 80px; }
 
 footer {
-    text-align: center;
-    background-color: black;
-    margin-bottom: 0px;
- }
+  text-align: center;
+  background-color: black;
+  margin-bottom: 0px; }
 
- .pie-img{
-    width: 100px;  
-    margin-top: 10px;
-    margin-left: 10px;
- }
+footer .pie-img {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px; }
 
- .pie-descripcion {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-}
+footer .pie-descripcion {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white; }
 
+/*estilos del header*/
+/*estilos del main*/
+.home-portada {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: "portada" "home-descripcion"; }
+
+.portada-imagen {
+  width: 100%;
+  height: 0.2%; }
+
+.portada {
+  grid-area: portada; }
+
+.home-descripcion {
+  grid-area: home-descripcion;
+  display: flex;
+  justify-content: center;
+  background-color: #e4e4e4; }
+
+/*estilos del footer*/
+/*vista para pantalla tablet*/
+@media screen and (max-width: 760px) {
+  .home-descripcion {
+    background-color: #f5e9da; } }
+
+/*pantalla celular*/
+@media screen and (max-width: 580px) {
+  footer {
+    display: none; } }
+
+.img-logo-menu {
+  width: 230px;
+  height: 80px; }
+
+footer {
+  text-align: center;
+  background-color: black;
+  margin-bottom: 0px; }
+
+footer .pie-img {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px; }
+
+footer .pie-descripcion {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white; }
 
 /* PAGINA 2 (NOSOTROS)*/
-
 /*estilos del main*/
-
-.cuerpo{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 100%;
-    display: grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:auto;
-    text-align: center;
-    
-
-    grid-template-areas:
-        "titulo titulo" 
-        "cuerpo-img p-1"
-        "cuerpo-img p-2"
-        
-        ;
-    justify-content:center;
-    justify-items: center;
-}
-.cuerpo-img{
-    grid-area: cuerpo-img;
-}
-
-.cuerpo-img:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}
-.p-1{
-    grid-area: p-1;
-}
-.p-2{
-    grid-area: p-2;
-
-}
-.titulo{
-    grid-area: titulo;
-
-}
-
-.titulo {
+.cuerpo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 4vh;
+  grid-template-areas: "titulo titulo"  "cuerpo-img p-1" "cuerpo-img p-2"; }
+  .cuerpo .titulo {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 70px;
     margin-top: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     background-color: black;
     align-items: center;
     color: white;
-    
-    
-}
-
-.cuerpo {
+    grid-area: titulo; }
+  .cuerpo .cuerpo-img {
+    grid-area: cuerpo-img;
+    height: 70%;
+    width: 90%;
+    transition: 2s, 1s; }
+  .cuerpo .cuerpo-img:hover {
+    filter: drop-shadow(10px 10px 10px #0a0a0a); }
+  .cuerpo .cuerpo-texto {
     text-align: center;
-}
+    padding: 50px 50px 50px 50px; }
+    .cuerpo .cuerpo-texto .p-1 {
+      grid-area: p-1; }
+    .cuerpo .cuerpo-texto .p-2 {
+      grid-area: p-2; }
 
-.cuerpo-texto{
-    text-align:center;
-    padding:50px 50px 50px 50px;
-
-    
-}
-
-
-.cuerpo-img {
-    height: 400px;
-    width: 500px;
-    
- }
-   
-
-footer{
-    margin-top: 100px;
-}
-
+footer {
+  margin-top: 100px; }
 
 /*vista para pantalla tablet*/
+@media screen and (max-width: 760px) {
+  .cuerpo-contenedor {
+    display: flex;
+    justify-content: center; }
+    .cuerpo-contenedor .cuerpo-img {
+      align-items: center;
+      width: 100vh; }
+    .cuerpo-contenedor .cuerpo-texto {
+      flex-direction: row;
+      text-align: center;
+      width: 100vh; } }
 
+/*pantalla celular*/
+@media screen and (max-width: 580px) {
+  .titulo {
+    display: none; }
+  .cuerpo-img {
+    display: none; }
+  .cuerpo-texto {
+    width: 60vh; }
+  footer {
+    display: none; } }
 
-@media screen and (max-width:760px){
-    .cuerpo-contenedor{
-        display: flex;
-        
-        justify-content: center;
+.img-logo-menu {
+  width: 230px;
+  height: 80px; }
 
-        
-        
-    }
+footer {
+  text-align: center;
+  background-color: black;
+  margin-bottom: 0px; }
 
-    .cuerpo-img{
-        
-        align-items: center;
-        width: 100vh;
-    }
+footer .pie-img {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px; }
 
-    .cuerpo-texto{
-        flex-direction: row;
-        text-align: center;
-        width: 100vh;
-       
-    }
-
-   
-}
-    
-    /*pantalla celular*/
-
-    @media screen and (max-width:580px){
-
-        .cuerpo-contenedor{
-            
-             }
-        .titulo{
-            display: none;
-        }
-        .cuerpo-img{
-            display: none;
-            
-        }
-
-        .cuerpo-texto{
-             width: 60vh;
-        }
-       
-
-
-    
-        
-        footer{
-            display: none;
-        }
-
-    
-    
-
-}
-    
+footer .pie-descripcion {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white; }
 
 /* PAGINA 3 (TRABAJOS)*/
-
 /*estilos del main*/
-
-.trabajos-titulo{
+.trabajos {
+  text-align: center; }
+  .trabajos .trabajos-titulo {
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     background-color: black;
-    text-align: center;
-}
-
-.trabajos{
-    text-align:center;
-}
-
-.trabajos-padre{
-    display:flex;
+    text-align: center; }
+  .trabajos .trabajos-padre {
+    display: flex;
     flex-wrap: wrap;
     justify-items: center;
     justify-content: center;
-    margin-top: 90px;
-}
-main div img{
-    width: 335px;
-    height:300px;
-    margin-right:10px;
-    margin-left: 10px;
-    margin-bottom: 90px;
-}
-.img-1:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}.img-2:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}
-.img-3:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}
-.img-4:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}.img-5:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}.img-6:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}.img-7:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}.img-8:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}.img-9:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}.img-10:hover{
-    filter: drop-shadow(10px 10px 10px rgb(10, 10, 10));
-}
+    gap: 30px; }
+
+main div img {
+  width: 17%;
+  height: 20%;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 90px;
+  transition: 2s, 1s; }
+
+.img-1:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-2:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-3:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-4:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-5:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-6:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-7:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-8:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-9:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
+
+.img-10:hover {
+  filter: drop-shadow(10px 10px 10px #0a0a0a); }
 
 /*vista para pantalla tablet*/
+@media screen and (max-width: 600px) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    grid-template-areas: "img-1 img-2" "img-3 img-4" "img-5 img-6" "img-7 img-8" "img-9 img-10"; }
+    main .img-1 {
+      grid-area: img-1; }
+    main .img-2 {
+      grid-area: img-2; }
+    main .img-3 {
+      grid-area: img-3; }
+    main .img-4 {
+      grid-area: img-4; }
+    main .img-5 {
+      grid-area: img-5; }
+    main .img-6 {
+      grid-area: img-6; }
+    main .img-7 {
+      grid-area: img-7; }
+    main .img-8 {
+      grid-area: img-8; }
+    main .img-9 {
+      grid-area: img-9; }
+    main .img-10 {
+      grid-area: img-10; } }
 
+/*pantalla celular*/
+@media screen and (max-width: 580px) {
+  .trabajos-titulo {
+    display: none; }
+  .trabajos-padre {
+    display: flex;
+    flex-direction: column; }
+  footer {
+    display: none; } }
 
-@media screen and (max-width:600px){
-    main{
-        
-        width: 100%;
-        display: grid;
-        grid-template-columns:auto;
-        grid-template-rows: auto;
+.img-logo-menu {
+  width: 230px;
+  height: 80px; }
 
-        grid-template-areas: 
-            "img-1 img-2"
-            "img-3 img-4"
-            "img-5 img-6"
-            "img-7 img-8"
-            "img-9 img-10";
-        justify-content: center;
-        justify-items: center;
-    }
-    .img-1{
-        grid-area: img-1;
-    }
-    .img-2{
-        grid-area: img-2;
-    }
-    .img-3{
-        grid-area: img-3;
-    }
-    .img-4{
-        grid-area: img-4;
-    }
-    .img-5{
-        grid-area: img-5;
-    }
-    .img-6{
-        grid-area: img-6;
-    }
-    .img-7{
-        grid-area: img-7;
-    }
-    .img-8{
-        grid-area: img-8;
-    }
-    .img-9{
-        grid-area: img-9;
-    }
-    .img-10{
-        grid-area: img-10;
-    }
-}
-    
-    /*pantalla celular*/
+footer {
+  text-align: center;
+  background-color: black;
+  margin-bottom: 0px; }
 
-    @media screen and (max-width:580px){
+footer .pie-img {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px; }
 
-
-        .trabajos-titulo{
-            display: none;
-        }
-
-        .trabajos-padre{
-            display: flex;
-            flex-direction: column;
-        }
-        footer{
-            display: none;
-        }
-
-    
-    
-
-}
+footer .pie-descripcion {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white; }
 
 /* PAGINA 4 (UBICACION)*/
-
 /*estilos del main*/
-
-.contenedor{
-    text-align: center;
-}
-   
-.contenedor-titulo {
+.contenedor {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+  grid-template-areas: "contenedor-titulo" "mapa" "contenedor-texto"; }
+  .contenedor .contenedor-titulo {
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     background-color: black;
     text-align: center;
     color: white;
-}
-        
-.mapa {
+    grid-area: contenedor-titulo; }
+  .contenedor .mapa {
     margin-top: 50px;
     margin-bottom: 30px;
-}
+    grid-area: mapa; }
+  .contenedor .contenedor-texto {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    grid-area: contenedor-texto;
+    display: flex;
+    flex-direction: column; }
+    .contenedor .contenedor-texto .contenedor-parrafo {
+      margin-bottom: 20px;
+      font-size: large; }
+    .contenedor .contenedor-texto .contenedor-parrafo-2 {
+      margin-bottom: 20px;
+      font-size: large; }
+    .contenedor .contenedor-texto .contenedor-parrafo-final {
+      margin-bottom: 50px; }
 
-.contenedor-texto {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+/*vista para pantalla tablet*/
+@media screen and (max-width: 760px) {
+  .contenedor-titulo {
+    color: black;
+    background-color: #eee8df; } }
 
-.contenedor-parrafo {
-    margin-bottom: 20px;
-    font-size: large;
-}
+/*pantalla celular*/
+@media screen and (max-width: 580px) {
+  .contenedor-titulo {
+    display: none; }
+  .mapa {
+    height: 50vh;
+    width: 50vh;
+    margin-bottom: 10px; }
+  footer {
+    display: none; } }
 
-.contenedor-parrafo-final {
-    margin-bottom: 50px;
-}
+.img-logo-menu {
+  width: 230px;
+  height: 80px; }
+
+footer {
+  text-align: center;
+  background-color: black;
+  margin-bottom: 0px; }
+
+footer .pie-img {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px; }
+
+footer .pie-descripcion {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white; }
 
 /* PAGINA 5 (CONTACTO)*/
-
 /*estilos del main*/
-
 .contacto {
-    text-align: center;  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 110vh;
-    
-    
-}
-
-.contacto-titulo {
-    padding-top:10px;
-    padding-bottom:10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+  grid-template-areas: "contacto-titulo" "contacto-contenido"; }
+  .contacto .contacto-titulo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     background-color: black;
     text-align: center;
-    
     width: 250vh;
     color: white;
-}
-
-.contacto-contenido{
+    grid-area: contacto-titulo; }
+  .contacto .contacto-contenido {
     margin-top: 10px;
-}
+    grid-area: contacto-contenido; }
+    .contacto .contacto-contenido .contacto-hijo {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      width: 500px; }
+      .contacto .contacto-contenido .contacto-hijo .contacto-img {
+        height: 13%;
+        width: 13%; }
+      .contacto .contacto-contenido .contacto-hijo .contacto-texto {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        padding: 10px;
+        margin-left: 20px; }
 
-.contacto-hijo {
-    margin-top: 30px;
-    display: flex;
-    flex-direction:row;
-    width: 500px;
-    
-}
+/*vista para pantalla tablet*/
+@media screen and (max-width: 760px) {
+  .contacto-titulo {
+    color: black;
+    background-color: #eee8df; } }
 
-.contacto-img {
-    height:60px ;
-    width:60px ;
-    
-}
-
-.contacto-texto {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 10px;
-    margin-left: 20px;
-}
+/*pantalla celular*/
+@media screen and (max-width: 580px) {
+  .contacto-titulo {
+    display: none; }
+  footer {
+    display: none; } }

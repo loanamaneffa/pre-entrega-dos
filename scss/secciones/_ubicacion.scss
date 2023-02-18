@@ -1,0 +1,87 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+/* PAGINA 4 (UBICACION)*/
+
+/*estilos del main*/
+
+.contenedor{
+    text-align: center;
+    @include grid-3;
+    grid-template-areas: 
+        "contenedor-titulo"
+        "mapa"
+        "contenedor-texto";
+
+        .contenedor-titulo {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: $letra;
+            background-color:$color-negro;
+            text-align: center;
+            color:$color-blanco;
+            grid-area: contenedor-titulo;
+        }
+
+            .mapa {
+                margin-top: 50px;
+                margin-bottom: 30px; 
+                grid-area: mapa;
+            }
+
+                .contenedor-texto {
+                    font-family:$letra;
+                    grid-area: contenedor-texto;
+                    display: flex;
+                    flex-direction: column;
+
+                        .contenedor-parrafo {
+                            margin-bottom: 20px;
+                            font-size: large;
+                        }
+                        .contenedor-parrafo-2 {
+                            margin-bottom: 20px;
+                            font-size: large;
+                        }
+                        
+                        .contenedor-parrafo-final {
+                            margin-bottom: 50px;
+                        }
+                }
+    
+}
+   
+
+  /*vista para pantalla tablet*/
+
+
+@media screen and (max-width:760px){
+    .contenedor-titulo{
+        color: $color-negro;
+        background-color:rgb(238, 232, 223);
+    }
+}
+
+/*pantalla celular*/
+
+@media screen and (max-width:580px){
+    .contenedor-titulo{
+        @include borrar;
+    }
+    .mapa{
+        height:50vh;
+        width: 50vh;
+        margin-bottom: 10px;
+        
+        
+    }
+    footer{
+        @include borrar;
+        }
+       
+}      
+
+
+
+
